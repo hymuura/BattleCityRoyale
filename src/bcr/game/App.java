@@ -1,5 +1,6 @@
 package bcr.game;
 
+import bcr.entity.Game;
 import bcr.entity.Map;
 
 public class App {
@@ -11,5 +12,7 @@ public class App {
         System.out.println("time: ");
         System.out.println(end-init);
         System.out.println(m.getFailed());
+        Thread t1 = new Thread(new Game());
+        t1.start();
     }
 }
